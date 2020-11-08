@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Genius Image Helper</title>
+        <style>
+            div.space {
+                /*border: 1px solid black;*/
+                width: 50%;
+                height: 100%;
+                text-align: center;
+            }
+
+            p.button {
+                margin: 5px; padding: 5px;
+                border: 1px solid black;
+                width: fit-content; height: fit-content;
+            }
+
+            @font-face {
+                font-family: 'FreeSet Bold Cyrillic';
+                font-style: normal;
+                font-weight: 700;
+                src: local('FreeSet Bold Cyrillic'), local('FreeSet-Bold Cyrillic'),
+                    url(http://allfont.ru/cache/fonts/freeset-bold-cyrillic_ebe075ac6e3b8dc795d26543e8028af2.woff) format('woff'),
+                    url(http://allfont.ru/cache/fonts/freeset-bold-cyrillic_ebe075ac6e3b8dc795d26543e8028af2.ttf) format('truetype');
+            }
+        </style>
+        <script src="js/main.js"></script>
+    </head>
+    <body onload="Main();">
+        <div style="display: flex;">
+            <div class="space">
+                <h1>Image editor</h1>
+                <form>
+                    <label>Album title</label><br>
+                    <input id="album_title">
+
+                    <br><br>
+
+                    <label>Album artist</label><br>
+                    <input id="album_artist">
+
+                    <br><br>
+
+                    <label>Text</label><br>
+                    <textarea id="text"></textarea>
+
+                    <br><br>
+
+                    <label>Image URL</label><br>
+                    <input id="image_url">
+
+                    <br><br>
+
+                    <input type="button" value="Update" id="update_button">
+                </form>
+            </div>
+            <div class="space">
+                <p><canvas id="canvas"></canvas></p>
+            </div>
+        </div>
+    </body>
+</html>
